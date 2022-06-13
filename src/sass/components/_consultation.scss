@@ -1,0 +1,64 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.s-consultation {
+  z-index: 3;
+  transform: translateY(70px);
+  @media (max-width: $breakpoint-md) {
+    transform: translateY(30px);
+  }
+  &__wrap {
+    background: $accentColor;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    @media (max-width: $breakpoint-md) {
+      padding: 20px;
+      text-align: center;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+
+    & img {
+      object-fit: cover;
+      opacity: 0.15;
+    }
+  }
+
+  & .section {
+    &-heading {
+      font-weight: 600;
+      margin-bottom: 6px;
+      @include fontSize(18, 24);
+    }
+
+    &-text {
+      @include fontSize(12, 14);
+      @media (min-width: $breakpoint-md) {
+        width: 80%;
+      }
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 18px;
+      }
+    }
+
+    &-heading, &-text {
+      color: $whiteColor;
+    }
+  }
+
+  & .btn-primary {
+    margin-right: 0;
+    margin-left: auto;
+    background-color: $whiteColor;
+    color: $accentColor;
+    @media (max-width: $breakpoint-md) {
+      margin: 0 auto;
+    }
+  }
+}
