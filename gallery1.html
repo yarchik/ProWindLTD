@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="format-detection" content="telephone=no"/>
 
-    <title>ProWind</title>
+    <title>Gallery inside</title>
     <meta name="description" content=""/>
 
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
     <link href="assets/css/app.css" rel="stylesheet"/>
-
+    <!--
+     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">-->
 </head>
 <body>
 
@@ -88,7 +90,7 @@
 
 <div class="body-padding"></div>
 <main class="main">
-
+    <img src="assets/img/layer.svg" alt="" class="layer-top">
     <div class="kama_breadcrumbs__wrap --relative">
         <div class="container">
             <div class="kama_breadcrumbs">
@@ -111,7 +113,7 @@
 
     <section class="section s-gallery-inside">
 
-        <img src="assets/img/layer.svg" alt="" class="layer-top">
+
         <div class="container">
             <div class="row align-center">
                 <div class="col-xl-6 col-lg-7 col-md-8 col-sm-12 col-xs-12">
@@ -149,7 +151,7 @@
 
                 </div>
 
-                <div class=" col-xl-2 col-lg-3 col-md-4 col-sm-12 col-xs-12 --relative carousel-main">
+                <div class=" col-xl-2 col-lg-3 col-md-4 col-sm-12 col-xs-12 --relative d-flex slider-thumbs__wrap">
 
 
                     <div class="slider-thumbs">
@@ -174,10 +176,12 @@
                         </div>
                     </div>
 
-
-                    <div class="slider__prev">prev</div>
-                    <div class="slider__next">next</div>
-
+                    <div class="slider-btn__wrap">
+                        <div class="slider-btn slider-btn__prev"><img src="assets/img/ar-top.svg" alt="image arrow top">
+                        </div>
+                        <div class="slider-btn slider-btn__next"><img src="assets/img/ar-bottom.svg"
+                                                                      alt="image arrow bottom"></div>
+                    </div>
                 </div>
 
             </div>
@@ -200,7 +204,7 @@
                     </div>
 
 
-                    <div class="characteristic">
+                    <div class="characteristic overlap">
                         <div class="characteristic__item d-flex">
                             <span class="characteristic__name">Model Mdel Model Model Model</span>
                             <div class="flex-dots"></div>
@@ -236,8 +240,6 @@
             </div>
 
         </div>
-
-        <img src="assets/img/layer.svg" alt="" class="layer-bottom">
     </section>
 
     <section class="s-consultation --relative">
@@ -263,7 +265,7 @@
             </div>
         </div>
     </section>
-
+    <img src="assets/img/layer.svg" alt="" class="layer-bottom">
 </main>
 
 <footer class="footer">
@@ -412,60 +414,10 @@
 
 
 <script src="assets/js/jquery-3.6.0.min.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
 
 <script src="assets/js/sliders.min.js"></script>
 <script src="assets/js/js_proWind.min.js"></script>
-
-
-<script>
-    // Инициализация превью слайдера
-    const sliderThumbs = new Swiper('.slider-thumbs .swiper-container', { // ищем слайдер превью по селектору
-        // задаем параметры
-        direction: 'vertical', // вертикальная прокрутка
-        slidesPerView: 3, // показывать по 3 превью
-        spaceBetween: 20, // расстояние между слайдами
-        navigation: { // задаем кнопки навигации
-            nextEl: '.slider__next', // кнопка Next
-            prevEl: '.slider__prev' // кнопка Prev
-        },
-        freeMode: true, // при перетаскивании превью ведет себя как при скролле
-        breakpoints: { // условия для разных размеров окна браузера
-            0: { // при 0px и выше
-                direction: 'horizontal',
-                spaceBetween: 4,// горизонтальная прокрутка
-            },
-            768: { // при 768px и выше
-                direction: 'vertical', // вертикальная прокрутка
-            }
-        }
-    });
-    // Инициализация слайдера изображений
-    const sliderImages = new Swiper('.slider-main .swiper-container', { // ищем слайдер превью по селектору
-        // задаем параметры
-        direction: 'horizontal', // вертикальная прокрутка
-        slidesPerView: 1, // показывать по 1 изображению
-        spaceBetween: 32, // расстояние между слайдами
-        mousewheel: false, // можно прокручивать изображения колёсиком мыши
-        navigation: { // задаем кнопки навигации
-            nextEl: '.slider__next', // кнопка Next
-            prevEl: '.slider__prev' // кнопка Prev
-        },
-        grabCursor: true, // менять иконку курсора
-        thumbs: { // указываем на превью слайдер
-            swiper: sliderThumbs // указываем имя превью слайдера
-        },
-        breakpoints: { // условия для разных размеров окна браузера
-            0: { // при 0px и выше
-                direction: 'horizontal',
-                mousewheel: false, // горизонтальная прокрутка
-            },
-            768: { // при 768px и выше
-                direction: 'horizontal', // вертикальная прокрутка
-            }
-        }
-    });
-</script>
 
 </body>
 </html>

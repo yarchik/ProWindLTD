@@ -10,10 +10,10 @@
     <meta name="description" content=""/>
 
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
     <link href="assets/css/app.css" rel="stylesheet"/>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+
 </head>
 <body>
 
@@ -88,22 +88,23 @@
 <div class="body-padding"></div>
 
 <main class="main">
-    <img src="assets/img/layer.svg" alt="" class="layer-top d-none d-xl-block">
-    <div class="kama_breadcrumbs__wrap --relative">
-        <div class="container">
 
-            <div class="kama_breadcrumbs">
+
+    <section class="s-contacts">
+        <img src="assets/img/layer.svg" alt="" class="layer-top">
+        <div class="kama_breadcrumbs__wrap --relative">
+            <div class="container">
+
+                <div class="kama_breadcrumbs">
             <span>
                 <a href=""><span>Home</span></a>
             </span>
-                <span class="kb_sep">-</span>
-                <span class="kb_title"> Contacts</span>
+                    <span class="kb_sep">-</span>
+                    <span class="kb_title"> Contacts</span>
+                </div>
+
             </div>
-
         </div>
-    </div>
-
-    <section class="s-contacts">
 
         <div class="container --relative s-contacts__container">
             <div class="row align-left align-middle">
@@ -148,9 +149,12 @@
                 </div>
                 <div class="column col-xl-5 col-lg-5 col-md-6 col-sm-12 col-xs-12  s-contacts__col">
                     <div class="s-contacts__form">
-                        <h1 class="section-heading">
-                            Fill out <span>the form</span>
-                        </h1>
+                        <div class="section-heading">
+                            <h1 class="section-heading__small text-center">
+                                Fill out <span>the form</span>
+                            </h1>
+                        </div>
+
                         <form>
                             <div class="form-control">
                                 <label for="name" class="form-control__label">Your name</label>
@@ -175,7 +179,7 @@
             <img src="assets/img/contacts.png" alt="" class="s-contacts__img">
         </div>
 
-
+        <img src="assets/img/layer.svg" alt="" class="layer-bottom">
     </section>
     <div id="map" class="s-contacts__map"></div>
 </main>
@@ -326,12 +330,12 @@
 
 <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key="
         type="text/javascript"></script>
+
 <script src="assets/js/jquery-3.6.0.min.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
 
 <script src="assets/js/sliders.min.js"></script>
 <script src="assets/js/js_proWind.min.js"></script>
-
 
 <script async defer>
 
@@ -532,7 +536,7 @@
 
         let bounds = new google.maps.LatLngBounds();
         let markers = [
-            ['UAVDDZ', 18.178606, -63.093690],
+            ['ProWind', 18.178606, -63.093690],
         ];
         let infoWindow = new google.maps.InfoWindow(), marker, i;
 

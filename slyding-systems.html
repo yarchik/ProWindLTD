@@ -89,7 +89,7 @@
 <div class="body-padding"></div>
 
 <main class="main">
-
+    <img src="assets/img/layer.svg" alt="" class="layer-top ">
     <div class="kama_breadcrumbs__wrap --relative">
         <div class="container">
 
@@ -201,9 +201,10 @@
         </div>
     </section>
 
-    <section class="s-type-system ">
-        <div class="container">
+    <section class="s-type-system --relative">
 
+        <img src="assets/img/layer.svg" alt="" class="layer-top">
+        <div class="container">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-xs-12 d-flex align-center --relative">
                     <div class="section-heading text-center  --relative">
@@ -226,7 +227,7 @@
                         <div class="row">
                             <div class="column col-xl-6 col-lg-6 col-md-6 col-md-6 col-xs-12 d-flex align-left">
 
-                                <div class="product-image-carousels">
+                                <div class="product-image-carousels carousel">
 
                                     <div class="thumbnails-slider">
                                         <div class="thumbnail-button">
@@ -274,13 +275,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="slick-controls">
-                                    <button class="previous"><img src="assets/img/ar-top.svg" alt=""></button>
-                                    <button class="next"><img src="assets/img/ar-bottom.svg" alt=""></button>
-
-                                </div>
-
                             </div>
                             <div class="column col-xl-6 col-lg-6 col-md-6 col-md-6 col-xs-12">
 
@@ -334,7 +328,7 @@
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-md-6 col-xs-12 d-flex align-left">
 
-                                <div class="product-image-carousels">
+                                <div class="product-image-carousels carousel">
 
                                     <div class="thumbnails-slider">
                                         <div class="thumbnail-button">
@@ -381,11 +375,6 @@
                                             <img src="assets/img/window-2.png" alt="">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="slick-controls">
-                                    <button class="previous"><img src="assets/img/ar-top.svg" alt=""></button>
-                                    <button class="next"><img src="assets/img/ar-bottom.svg" alt=""></button>
-
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-md-6 col-xs-12">
@@ -514,7 +503,7 @@
         </div>
     </section>
 
-    <section class="section s-individual-solution">
+    <section class="section s-individual-solution --relative">
         <div class="container">
             <div class="row align-middle --relative">
 
@@ -584,6 +573,8 @@
             </div>
         </div>
     </section>
+
+    <img src="assets/img/layer.svg" alt="" class="layer-bottom ">
 </main>
 
 <footer class="footer">
@@ -767,8 +758,14 @@
             asNavFor: '.main-image-slider',
             centerMode: false,
             focusOnSelect: true,
-            nextArrow: '.next',
-            prevArrow: '.previous'
+            responsive: [
+                {
+                    breakpoint: 580,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                }
+            ]
         });
 
 
